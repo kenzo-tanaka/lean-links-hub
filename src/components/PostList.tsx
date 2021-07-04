@@ -14,30 +14,14 @@ import {
 dayjs.extend(relativeTime);
 
 const PostLink: React.FC<{ item: PostItem }> = (props) => {
-  const { authorName, title, isoDate, link, dateMiliSeconds } = props.item;
-  const member = getMemberByName(authorName);
-  if (!member) return null;
+  const { authorName, title, link } = props.item;
+  // const member = getMemberByName(authorName);
+  // if (!member) return null;
 
   const hostname = getHostFromURL(link);
 
   return (
     <article className="post-link">
-      <Link href={getMemberPath(member.name)} passHref>
-        <a className="post-link__author">
-          <img
-            src={member.avatarSrc}
-            className="post-link__author-img"
-            width={35}
-            height={35}
-          />
-          <div className="post-link__author-name">
-            <div className="post-link__author-name">{member.name}</div>
-            <time dateTime={isoDate} className="post-link__date">
-              {dayjs(isoDate).fromNow()}
-            </time>
-          </div>
-        </a>
-      </Link>
       <a href={link} className="post-link__main-link">
         <h2 className="post-link__title">{title}</h2>
         {hostname && (
@@ -52,9 +36,6 @@ const PostLink: React.FC<{ item: PostItem }> = (props) => {
           </div>
         )}
       </a>
-      {dateMiliSeconds && dateMiliSeconds > Date.now() - 86400000 * 3 && (
-        <div className="post-link__new-label">NEW</div>
-      )}
     </article>
   );
 };

@@ -15,7 +15,7 @@ export type PostItem = {
   authorName: string;
   title: string;
   link: string;
-  contentSnippet?: string;
-  isoDate?: string;
-  dateMiliSeconds: number;
+  // contentSnippet?: string;
+  // isoDate?: string;
+  // dateMiliSeconds: number;
 };
