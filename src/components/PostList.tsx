@@ -1,27 +1,23 @@
 import { useState } from "react";
-import Link from "next/link";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import { PostItem } from "@src/types";
-import {
-  getMemberByName,
-  getHostFromURL,
-  getFaviconSrcFromHostname,
-  getMemberPath,
-} from "@src/utils/helper";
+import { getHostFromURL, getFaviconSrcFromHostname } from "@src/utils/helper";
 
 dayjs.extend(relativeTime);
 
 const PostLink: React.FC<{ item: PostItem }> = (props) => {
   const { authorName, title, link } = props.item;
-  // const member = getMemberByName(authorName);
-  // if (!member) return null;
-
   const hostname = getHostFromURL(link);
 
   return (
     <article className="post-link">
+      <div className="post-link__author">
+        <div className="post-link__author-name">
+          <div className="post-link__author-name">{authorName}</div>
+        </div>
+      </div>
       <a href={link} className="post-link__main-link">
         <h2 className="post-link__title">{title}</h2>
         {hostname && (
