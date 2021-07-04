@@ -1,9 +1,3 @@
-import { PostItem } from "@src/types";
-import posts from "@.contents/posts.json";
-
-export function getMemberPostsByName(name: string) {
-  return (posts as PostItem[]).filter((item) => item.authorName === name);
-}
 export function getHostFromURL(str: string) {
   const url = new URL(str);
   return url?.hostname || "blog";
