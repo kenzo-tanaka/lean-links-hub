@@ -33,7 +33,7 @@ const Page: NextPage = () => {
         </ContentWrapper>
       </section>
 
-      <section className="home-members">
+      {/* <section className="home-members">
         <ContentWrapper>
           <div className="home-section-title-container">
             <h2 className="home-section-title">Members</h2>
@@ -48,7 +48,7 @@ const Page: NextPage = () => {
             </UndoWrapForScroll>
           </div>
         </ContentWrapper>
-      </section>
+      </section> */}
 
       <section className="home-posts">
         <ContentWrapper>
