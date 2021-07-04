@@ -1,8 +1,8 @@
 export const config = {
   siteMeta: {
-    title: "Team Blog Hub",
+    title: "PMF links",
     teamName: "catnose Inc.",
-    description: "RSS based blog starter kit for teams.",
+    description: "PMFに関する情報キュレーションサイト",
   },
   siteRoot:
     process.env.NODE_ENV === "production"
