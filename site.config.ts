@@ -1,8 +1,7 @@
 export const config = {
   siteMeta: {
-    title: "PMF links",
-    teamName: "catnose Inc.",
-    description: "PMFに関する情報キュレーションサイト",
+    title: "PMF Links",
+    description: "PMFやリーンスタートアップに関する情報キュレーションサイト",
   },
   siteRoot:
     process.env.NODE_ENV === "production"
