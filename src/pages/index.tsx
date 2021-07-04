@@ -1,10 +1,10 @@
 import { NextPage } from "next";
-import Link from "next/link";
+// import Link from "next/link";
 
-import posts from "@.contents/posts.json";
+import posts from "@links.json";
 import { config } from "@site.config";
 import { PostItem } from "@src/types";
-import { ScrollableMembers } from "@src/components/ScrollableMembers";
+// import { ScrollableMembers } from "@src/components/ScrollableMembers";
 import { PostList } from "@src/components/PostList";
 import { PageSEO } from "@src/components/PageSEO";
 import {
