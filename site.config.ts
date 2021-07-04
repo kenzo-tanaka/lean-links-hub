@@ -1,7 +1,7 @@
 export const config = {
   siteMeta: {
-    title: "PMF Links",
-    description: "PMFやリーンスタートアップに関する情報キュレーションサイト",
+    title: "Lean Links",
+    description: "リーンスタートアップやPMFに関する情報キュレーションサイト",
   },
   siteRoot:
     process.env.NODE_ENV === "production"
